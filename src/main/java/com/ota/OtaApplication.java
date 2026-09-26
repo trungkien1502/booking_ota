@@ -1,11 +1,11 @@
-package com.ota.test;
+package com.ota;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestApplication {
+public class OtaApplication {
 
 	public static void main(String[] args) {
 		Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
@@ -13,7 +13,7 @@ public class TestApplication {
 				entry -> System.setProperty(entry.getKey(), entry.getValue())
 		);
 
-		SpringApplication.run(TestApplication.class, args);
+		SpringApplication.run(OtaApplication.class, args);
 	}
 
 }
